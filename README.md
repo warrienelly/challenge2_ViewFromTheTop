@@ -148,14 +148,14 @@ You can use the following resources to to get acquainted with some feature selec
 
 
 ###### Model Explanation
--Through EDA , i found out that the classes trees and grasses really depended on the feature NDVI.
--In the quest of researching more about ariel view, i researched, discovered and added a new feature 
+- Through EDA , i found out that the classes trees and grasses really depended on the feature NDVI.
+- In the quest of researching more about ariel view, i researched, discovered and added a new feature 
 NDWI= (train.Mean_G - train.Mean_NIR)/(train.Mean_G + train.Mean_NIR)
--This new feature cut across all scale parameter NDWI_40,NDWI_60,NDWI_100,NDWI_120,NDWI_140
--The new feature NDWI, really increased the accuracy of all baseline model i tried.
--Since the data is highly multi-dimensional with lots of correlated features, i carried out recursive features elimination with Statified cross validation. The reason for using stratified cross validation is due to the imbalanced data. This helped me to choose the best model that could eliminate overfitting.
--During the feature elimination process, it was observed that models performance were dependent on specific features. No model performed well using all features. Xgboost tend to be more stable across each coarser scale.
--Model i used for simple based line was - ExtraTreeClassifier, GradientBoosting, SVC, Randomforest, LogisticClassifier, LinearSVC.
+- This new feature cut across all scale parameter NDWI_40,NDWI_60,NDWI_100,NDWI_120,NDWI_140
+- The new feature NDWI, really increased the accuracy of all baseline model i tried.
+- Since the data is highly multi-dimensional with lots of correlated features, i carried out recursive features elimination with Statified cross validation. The reason for using stratified cross validation is due to the imbalanced data. This helped me to choose the best model that could eliminate overfitting.
+- During the feature elimination process, it was observed that models performance were dependent on specific features. No model performed well using all features. Xgboost tend to be more stable across each coarser scale.
+- Model i used for simple based line was - ExtraTreeClassifier, GradientBoosting, SVC, Randomforest, LogisticClassifier, LinearSVC.
 - After running this simple model, i picked the best 3 accuracy and cohen_kappa score: Extra_tree with 21 features, Xgboost with 31 features and RandomForest with 132 features. 
 - I also observed that size and shape variable didn't do well as compared to texture and spectral variable
 - I finally choosed RandomForest over the top 2 model, because it has high accuracy in predicting class  car inwhich, ExtraTree and Xgboost were doing poorly.  

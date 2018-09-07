@@ -150,7 +150,7 @@ You can use the following resources to to get acquainted with some feature selec
 ###### Model Explanation
 - Through EDA , i found out that the classes trees and grasses really depended on the feature NDVI.
 - In the quest of researching more about ariel view, i researched, discovered and added a new feature 
-NDWI= (train.Mean_G - train.Mean_NIR)/(train.Mean_G + train.Mean_NIR)
+NDWI= (Mean_G - Mean_NIR)/(Mean_G + Mean_NIR)
 - This new feature cut across all scale parameter NDWI_40,NDWI_60,NDWI_100,NDWI_120,NDWI_140
 - The new feature NDWI, really increased the accuracy of all baseline model i tried.
 - Since the data is highly multi-dimensional with lots of correlated features, i carried out recursive features elimination with Statified cross validation. The reason for using stratified cross validation is due to the imbalanced data. This helped me to choose the best model that could eliminate overfitting.
